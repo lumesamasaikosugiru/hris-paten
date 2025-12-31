@@ -12,11 +12,11 @@ return new class extends Migration {
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->nullOnDelete();
-            $table->foreignId('school_id')->constrained()->nullOnDelete();
-            $table->foreignId('department_id')->constrained()->nullOnDelete();
-            $table->foreignId('position_id')->constrained()->nullOnDelete();
-            $table->foreignId('applicant_biodata_id')->constrained()->nullOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('school_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('department_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('position_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('applicant_biodata_id')->nullable()->constrained()->nullOnDelete();
             $table->date('hire_date');
             $table->enum('status', ['active', 'inactive']);
             $table->string('photopath')->nullable();

@@ -12,10 +12,10 @@ return new class extends Migration {
     {
         Schema::create('position_assignments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained()->nullOnDelete();
-            $table->foreignId('position_id')->constrained()->nullOnDelete();
-            $table->foreignId('school_id')->constrained()->nullOnDelete();
-            $table->foreignId('department_id')->constrained()->nullOnDelete();
+            $table->foreignId('employee_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('position_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('school_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('department_id')->nullable()->constrained()->nullOnDelete();
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->boolean('is_active');

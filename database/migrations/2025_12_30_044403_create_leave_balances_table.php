@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('leave_balances', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained()->nullOnDelete();
+            $table->foreignId('employee_id')->nullable()->constrained()->nullOnDelete();
             $table->integer('year');
-            $table->foreignId('leave_type_id')->constrained()->nullOnDelete();
+            $table->foreignId('leave_type_id')->nullable()->constrained()->nullOnDelete();
             $table->integer('total_quota');
             $table->integer('used_days');
             $table->integer('remaining_days');
