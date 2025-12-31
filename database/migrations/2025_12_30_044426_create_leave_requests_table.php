@@ -21,9 +21,9 @@ return new class extends Migration {
             $table->string('reason');
             $table->enum('status', ['pending', 'approved', 'rejected']);
             $table->foreignId('approved_by')->constrained('users')->nullOnDelete();
-            $table->timestamp('approved_at');
-            $table->string('declined_reason');
-            $table->string('attachement_path');
+            $table->timestamp('approved_at')->nullable();
+            $table->string('declined_reason')->nullable();
+            $table->string('attachment_path')->nullable();
             $table->timestamps();
         });
     }

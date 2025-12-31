@@ -20,9 +20,9 @@ return new class extends Migration {
             $table->string('check_in_location');
             $table->string('check_out_location');
             $table->boolean('is_late');
-            $table->time('minutes_late');
+            $table->integer('minutes_late')->default(0);
             $table->time('work_time');
-            $table->enum('status', ['present', 'absent', 'wfh/remote', 'leave']);
+            $table->enum('status', ['present', 'absent', 'remote', 'leave']);
             $table->timestamps();
         });
     }

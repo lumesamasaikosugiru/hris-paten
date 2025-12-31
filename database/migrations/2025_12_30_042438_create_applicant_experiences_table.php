@@ -12,8 +12,8 @@ return new class extends Migration {
     {
         Schema::create('applicant_experiences', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('applican_biodata_id')->constrained()->cascadeOnDelete();
-            $table->string('job_tittle');
+            $table->foreignId('applicant_biodata_id')->constrained()->cascadeOnDelete();
+            $table->string('job_title');
             $table->string('company_name');
             $table->text('description');
             $table->date('start_date');

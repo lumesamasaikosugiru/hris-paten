@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('address_district');
             $table->string('address_city');
             $table->enum('marital_status', ['single', 'married', 'widowed', 'divorced', 'separated']);
-            $table->string('ethnicity');
+            $table->string('ethnicity')->nullable();
             $table->string('phone')->unique();
             $table->timestamps();
         });

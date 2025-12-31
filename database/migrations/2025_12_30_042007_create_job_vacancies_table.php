@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('job_title');
             $table->text('job_desc');
             $table->text('requirements');
-            $table->integer('salary');
+            $table->integer('salary')->nullable();
             $table->timestamps();
         });
     }

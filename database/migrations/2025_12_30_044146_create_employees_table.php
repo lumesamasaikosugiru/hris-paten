@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->foreignId('applicant_biodata_id')->constrained()->nullOnDelete();
             $table->date('hire_date');
             $table->enum('status', ['active', 'inactive']);
-            $table->string('photopath');
+            $table->string('photopath')->nullable();
             $table->timestamps();
         });
     }
