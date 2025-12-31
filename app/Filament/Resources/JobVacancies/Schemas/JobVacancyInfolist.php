@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Filament\Resources\JobVacancies\Schemas;
+
+use Filament\Infolists\Components\TextEntry;
+use Filament\Schemas\Schema;
+
+class JobVacancyInfolist
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextEntry::make('job_title'),
+                TextEntry::make('job_desc')
+                    ->columnSpanFull(),
+                TextEntry::make('requirements')
+                    ->columnSpanFull(),
+                TextEntry::make('salary')
+                    ->numeric()
+                    ->placeholder('-'),
+                TextEntry::make('created_at')
+                    ->dateTime()
+                    ->placeholder('-'),
+                TextEntry::make('updated_at')
+                    ->dateTime()
+                    ->placeholder('-'),
+            ]);
+    }
+}
