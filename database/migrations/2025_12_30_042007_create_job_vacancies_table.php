@@ -12,6 +12,10 @@ return new class extends Migration {
     {
         Schema::create('job_vacancies', function (Blueprint $table) {
             $table->id();
+            $table->string('job_title');
+            $table->text('job_desc');
+            $table->text('requirements');
+            $table->integer('salary');
             $table->timestamps();
         });
     }

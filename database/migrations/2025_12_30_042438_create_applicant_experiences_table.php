@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,6 +12,12 @@ return new class extends Migration
     {
         Schema::create('applicant_experiences', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('applican_biodata_id')->constrained()->cascadeOnDelete();
+            $table->string('job_tittle');
+            $table->string('company_name');
+            $table->text('description');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }

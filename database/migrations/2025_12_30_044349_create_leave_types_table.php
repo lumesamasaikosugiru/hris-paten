@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,6 +12,12 @@ return new class extends Migration
     {
         Schema::create('leave_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('default_days');
+            $table->boolean('is_quota_based');
+            $table->enum('gender_restriction', ['male', 'female']);
+            $table->enum('repeat_cycle', ['year', 'once', 'none']);
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }
