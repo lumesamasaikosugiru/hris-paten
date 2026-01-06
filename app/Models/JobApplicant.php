@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class JobApplicant extends Model
 {
     //
-    protected $fillables =
+    protected $fillable =
         [
             'applicant_biodata_id',
             'job_vacancy_id',

@@ -27,12 +27,12 @@ class School extends Model
         return $this->hasMany(Department::class, 'school_id');
     }
 
-    public function position_assignments(): HasMany
+    public function positionAssignments(): HasMany
     {
         return $this->hasMany(PositionAssignment::class, 'school_id');
     }
 
-    public function employee_school_histories(): HasMany
+    public function employeeSchoolHistories(): HasMany
     {
         return $this->hasMany(EmployeeSchoolHistory::class, 'school_id');
     }
@@ -42,7 +42,7 @@ class School extends Model
         return $this->hasMany(Attendance::class, 'school_id');
     }
 
-    public function leave_requests(): HasMany
+    public function leaveRequests(): HasMany
     {
         return $this->hasMany(LeaveRequest::class, 'school_id');
     }

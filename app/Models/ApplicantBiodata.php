@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ApplicantBiodata extends Model
@@ -44,5 +45,15 @@ class ApplicantBiodata extends Model
     public function employees(): HasMany
     {
         return $this->hasMany(Employee::class, 'applicant_biodata_id');
+    }
+
+    public function jobVacancies(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            JobVacancy::class,
+            'job_applicants',
+            'applicant_biodata_id',
+            'job_vacancy_id'
+        );
     }
 }

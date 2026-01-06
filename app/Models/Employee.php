@@ -18,7 +18,7 @@ class Employee extends Model
             'school_id',
             'department_id',
             'position_id',
-            'applicant_id',
+            'applicant_biodata_id',
             'hire_date',
             'status',
             'photo_path',

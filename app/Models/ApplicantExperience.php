@@ -10,7 +10,7 @@ class ApplicantExperience extends Model
     //
     protected $fillable =
         [
-            'applicant_bidata_id',
+            'applicant_biodata_id',
             'job_title',
             'company_name',
             'description',
