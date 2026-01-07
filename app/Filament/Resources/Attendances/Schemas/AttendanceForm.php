@@ -15,8 +15,8 @@ class AttendanceForm
     {
         return $schema
             ->components([
-                TextInput::make('employee_id')
-                    ->numeric()
+                Select::make('employee_id')
+                    ->relationship('employee', 'user_id')
                     ->default(null),
                 TextInput::make('school_id')
                     ->numeric()

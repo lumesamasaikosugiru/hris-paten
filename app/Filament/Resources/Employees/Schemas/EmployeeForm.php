@@ -13,21 +13,26 @@ class EmployeeForm
     {
         return $schema
             ->components([
-                TextInput::make('user_id')
-                    ->numeric()
-                    ->default(null),
-                TextInput::make('school_id')
-                    ->numeric()
-                    ->default(null),
-                TextInput::make('department_id')
-                    ->numeric()
-                    ->default(null),
-                TextInput::make('position_id')
-                    ->numeric()
-                    ->default(null),
-                TextInput::make('applicant_biodata_id')
-                    ->numeric()
-                    ->default(null),
+                Select::make('user_id')
+                    ->relationship('user', 'name')
+                    ->label('Pegawai')
+                    ->required(),
+                Select::make('school_id')
+                    ->relationship('school', 'name')
+                    ->label('Sekolah')
+                    ->required(),
+                Select::make('department_id')
+                    ->relationship('department', 'name')
+                    ->label('Bidang Posisi')
+                    ->required(),
+                Select::make('position_id')
+                    ->relationship('position', 'name')
+                    ->label('Jabatan')
+                    ->required(),
+                Select::make('applicant_biodata_id')
+                    ->relationship('applicantBio', 'fullname')
+                    ->label('Pelamar')
+                    ->default('null'),
                 DatePicker::make('hire_date')
                     ->required(),
                 Select::make('status')
