@@ -11,6 +11,7 @@ use App\Filament\Resources\JobApplicants\Schemas\JobApplicantInfolist;
 use App\Filament\Resources\JobApplicants\Tables\JobApplicantsTable;
 use App\Models\JobApplicant;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,7 @@ class JobApplicantResource extends Resource
     protected static ?string $model = JobApplicant::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';
 
     protected static ?string $recordTitleAttribute = 'JobApplicant';
 

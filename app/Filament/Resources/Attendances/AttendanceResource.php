@@ -11,6 +11,7 @@ use App\Filament\Resources\Attendances\Schemas\AttendanceInfolist;
 use App\Filament\Resources\Attendances\Tables\AttendancesTable;
 use App\Models\Attendance;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class AttendanceResource extends Resource
     protected static ?string $model = Attendance::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';
+
 
     protected static ?string $recordTitleAttribute = 'Attendance';
 

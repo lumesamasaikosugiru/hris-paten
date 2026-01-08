@@ -11,6 +11,7 @@ use App\Filament\Resources\LeaveTypes\Schemas\LeaveTypeInfolist;
 use App\Filament\Resources\LeaveTypes\Tables\LeaveTypesTable;
 use App\Models\LeaveType;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class LeaveTypeResource extends Resource
     protected static ?string $model = LeaveType::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';
+
 
     protected static ?string $recordTitleAttribute = 'LeaveType';
 

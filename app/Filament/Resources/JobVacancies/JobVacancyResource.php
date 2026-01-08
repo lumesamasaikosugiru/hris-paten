@@ -11,6 +11,7 @@ use App\Filament\Resources\JobVacancies\Schemas\JobVacancyInfolist;
 use App\Filament\Resources\JobVacancies\Tables\JobVacanciesTable;
 use App\Models\JobVacancy;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class JobVacancyResource extends Resource
     protected static ?string $model = JobVacancy::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';
+
 
     protected static ?string $recordTitleAttribute = 'JobVacancy';
 

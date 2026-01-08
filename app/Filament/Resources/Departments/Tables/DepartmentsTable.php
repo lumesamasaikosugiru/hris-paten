@@ -15,10 +15,11 @@ class DepartmentsTable
     {
         return $table
             ->columns([
-                TextColumn::make('school_id')
-                    ->numeric()
+                TextColumn::make('school.name')
+                    ->label('Sekolah')
                     ->sortable(),
                 TextColumn::make('name')
+                    ->label('Bidang Posisi')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

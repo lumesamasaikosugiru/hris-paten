@@ -11,6 +11,7 @@ use App\Filament\Resources\LeaveRequests\Schemas\LeaveRequestInfolist;
 use App\Filament\Resources\LeaveRequests\Tables\LeaveRequestsTable;
 use App\Models\LeaveRequest;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class LeaveRequestResource extends Resource
     protected static ?string $model = LeaveRequest::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';
+
 
     protected static ?string $recordTitleAttribute = 'LeaveRequest';
 

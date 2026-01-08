@@ -11,6 +11,7 @@ use App\Filament\Resources\Skills\Schemas\SkillInfolist;
 use App\Filament\Resources\Skills\Tables\SkillsTable;
 use App\Models\Skill;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class SkillResource extends Resource
     protected static ?string $model = Skill::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';
+
 
     protected static ?string $recordTitleAttribute = 'Skill';
 

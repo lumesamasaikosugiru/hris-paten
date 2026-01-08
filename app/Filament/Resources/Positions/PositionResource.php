@@ -11,6 +11,7 @@ use App\Filament\Resources\Positions\Schemas\PositionInfolist;
 use App\Filament\Resources\Positions\Tables\PositionsTable;
 use App\Models\Position;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -21,6 +22,8 @@ class PositionResource extends Resource
     protected static ?string $model = Position::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|UnitEnum|null $navigationGroup = 'Institutions';
+
 
     protected static ?string $recordTitleAttribute = 'Position';
 
