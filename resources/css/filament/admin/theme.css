@@ -19,9 +19,9 @@
    DARK MODE
    ========================= */
 .dark {
-    --color-main-primary: rgb(15, 23, 42);      /* deep navy */
+    --color-main-primary: rgb(26, 10, 24);      /* deep navy */
     --color-main-secondary: rgb(30, 41, 59);    /* dongker */
-    --color-main-black: rgb(226, 232, 240);     /* light text */
+    --color-main-black: rgb(177, 192, 212);     /* light text */
     --color-main-white: rgb(248, 250, 252);
     --color-main-accent: rgb(96, 165, 250);     /* soft blue */
 }

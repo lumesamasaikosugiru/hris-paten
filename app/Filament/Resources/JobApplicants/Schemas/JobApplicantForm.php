@@ -13,19 +13,21 @@ class JobApplicantForm
     {
         return $schema
             ->components([
-                TextInput::make('applicant_biodata_id')
+                Select::make('applicant_biodata_id')
+                    ->relationship('applicantBiodata', 'fullname')
                     ->required()
-                    ->numeric(),
-                TextInput::make('job_vacancy_id')
-                    ->required()
-                    ->numeric(),
+                    ->searchable(),
+                Select::make('job_vacancy_id')
+                    ->relationship('jobVacancy', 'job_title')
+                    ->searchable()
+                    ->required(),
                 Select::make('status')
                     ->options([
-            'submitted' => 'Submitted',
-            'screening' => 'Screening',
-            'accepted' => 'Accepted',
-            'rejected' => 'Rejected',
-        ])
+                        'submitted' => 'Submitted',
+                        'screening' => 'Screening',
+                        'accepted' => 'Accepted',
+                        'rejected' => 'Rejected',
+                    ])
                     ->required(),
                 DatePicker::make('date_submitted')
                     ->required(),

@@ -4,7 +4,9 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -57,5 +59,11 @@ class User extends Authenticatable
     public function employees(): HasMany
     {
         return $this->hasMany(Employee::class, 'user_id');
+    }
+
+    //hasONE
+    public function applicantBiodata(): HasOne
+    {
+        return $this->hasOne(ApplicantBiodata::class); //1 pelamar diacc -> 1 user -> 1 employee
     }
 }

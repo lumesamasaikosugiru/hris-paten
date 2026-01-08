@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ApplicantBiodata extends Model
 {
@@ -55,5 +56,17 @@ class ApplicantBiodata extends Model
             'applicant_biodata_id',
             'job_vacancy_id'
         );
+    }
+
+    //hasONE
+
+    public function user(): HasOne
+    {
+        return $this->hasOne(User::class);
+    }
+
+    public function employee(): HasOne
+    {
+        return $this->hasOne(Employee::class);
     }
 }

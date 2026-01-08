@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\JobVacancies\Tables;
+namespace App\Filament\Resources\ApplicantBiodatas\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -9,21 +9,33 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class JobVacanciesTable
+class ApplicantBiodatasTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('job_title')
+                TextColumn::make('ktp')
                     ->searchable(),
-                TextColumn::make('job_desc')
+                TextColumn::make('fullname')
                     ->searchable(),
-                TextColumn::make('requirements')
-                    ->searchable(),
-                TextColumn::make('salary')
-                    ->numeric()
+                TextColumn::make('gender')
+                    ->badge(),
+                TextColumn::make('birthday')
+                    ->date()
                     ->sortable(),
+                TextColumn::make('address_street')
+                    ->searchable(),
+                TextColumn::make('address_district')
+                    ->searchable(),
+                TextColumn::make('address_city')
+                    ->searchable(),
+                TextColumn::make('marital_status')
+                    ->badge(),
+                TextColumn::make('ethnicity')
+                    ->searchable(),
+                TextColumn::make('phone')
+                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
