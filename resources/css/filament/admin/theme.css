@@ -1,0 +1,86 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* =========================
+   THEME TOKENS
+   ========================= */
+@theme {
+    /* Light mode */
+    --color-main-primary: rgb(245, 247, 250);   /* light blue-gray */
+    --color-main-secondary: rgb(226, 232, 240); /* soft slate */
+    --color-main-black: rgb(30, 41, 59);        /* navy text */
+    --color-main-white: rgb(255, 255, 255);
+    --color-main-accent: rgb(37, 99, 235);      /* blue accent */
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+.dark {
+    --color-main-primary: rgb(15, 23, 42);      /* deep navy */
+    --color-main-secondary: rgb(30, 41, 59);    /* dongker */
+    --color-main-black: rgb(226, 232, 240);     /* light text */
+    --color-main-white: rgb(248, 250, 252);
+    --color-main-accent: rgb(96, 165, 250);     /* soft blue */
+}
+
+/* =========================
+   BODY
+   ========================= */
+.fi-body {
+    background: linear-gradient(
+        180deg,
+        var(--color-main-primary),
+        var(--color-main-secondary)
+    );
+    color: var(--color-main-black);
+}
+
+/* =========================
+   TOPBAR
+   ========================= */
+.fi-topbar {
+    background-color: var(--color-main-primary);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.fi-sidebar {
+    background-color: var(--color-main-secondary);
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}
+
+/* =========================
+   TABLES (FILAMENT)
+   ========================= */
+.fi-ta-table {
+    background-color: var(--color-main-white);
+    color: var(--color-main-black);
+}
+
+.dark .fi-ta-table {
+    background-color: rgb(15, 23, 42);
+}
+
+.fi-ta-header {
+    background-color: var(--color-main-secondary);
+    color: var(--color-main-black);
+}
+
+.dark .fi-ta-header {
+    background-color: rgb(30, 41, 59);
+}
+
+/* Row hover */
+.fi-ta-row:hover {
+    background-color: rgba(37, 99, 235, 0.08);
+}
+
+.dark .fi-ta-row:hover {
+    background-color: rgba(96, 165, 250, 0.12);
+}
