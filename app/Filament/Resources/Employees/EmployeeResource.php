@@ -20,6 +20,8 @@ use Filament\Tables\Table;
 class EmployeeResource extends Resource
 {
     protected static ?string $model = Employee::class;
+    protected static ?string $pluralModelLabel = 'Pegawai';
+
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
     protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';

@@ -20,8 +20,10 @@ use Filament\Tables\Table;
 class SchoolResource extends Resource
 {
     protected static ?string $model = School::class;
+    protected static ?string $pluralModelLabel = 'Data Sekolah';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingLibrary;
     protected static string|UnitEnum|null $navigationGroup = 'Institutions';
 
 

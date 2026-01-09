@@ -20,6 +20,8 @@ use Filament\Tables\Table;
 class JobVacancyResource extends Resource
 {
     protected static ?string $model = JobVacancy::class;
+    protected static ?string $pluralModelLabel = 'Lowongan Pekerjaan';
+
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocument;
     protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';

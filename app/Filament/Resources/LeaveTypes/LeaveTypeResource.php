@@ -20,8 +20,10 @@ use Filament\Tables\Table;
 class LeaveTypeResource extends Resource
 {
     protected static ?string $model = LeaveType::class;
+    protected static ?string $pluralModelLabel = 'Jenis Cuti';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedListBullet;
     protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';
 
 

@@ -20,8 +20,10 @@ use Filament\Tables\Table;
 class SkillResource extends Resource
 {
     protected static ?string $model = Skill::class;
+    protected static ?string $pluralModelLabel = 'Skill Pelamar';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBarsArrowUp;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCodeBracketSquare;
     protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';
 
 

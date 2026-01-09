@@ -20,8 +20,10 @@ use Filament\Tables\Table;
 class LeaveRequestResource extends Resource
 {
     protected static ?string $model = LeaveRequest::class;
+    protected static ?string $pluralModelLabel = 'Pengajuan Cuti';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPencilSquare;
     protected static string|UnitEnum|null $navigationGroup = 'Employee Affairs';
 
 
