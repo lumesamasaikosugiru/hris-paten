@@ -15,27 +15,33 @@ class EmployeesTable
     {
         return $table
             ->columns([
-                TextColumn::make('user_id')
-                    ->numeric()
+                TextColumn::make('user.name')
+                    ->label('User')
+                    ->searchable()
                     ->sortable(),
-                TextColumn::make('school_id')
-                    ->numeric()
+                TextColumn::make('school.name')
+                    ->label('Sekolah')
+                    ->searchable()
                     ->sortable(),
-                TextColumn::make('department_id')
-                    ->numeric()
+                TextColumn::make('department.name')
+                    ->label('Bidang Posisi')
+                    ->searchable()
                     ->sortable(),
-                TextColumn::make('position_id')
-                    ->numeric()
+                TextColumn::make('position.name')
+                    ->label('Posisi/Jabatan')
+                    ->searchable()
                     ->sortable(),
                 TextColumn::make('applicant_biodata_id')
-                    ->numeric()
-                    ->sortable(),
+                    ->label('ID Pelamar')
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->searchable(),
                 TextColumn::make('hire_date')
                     ->date()
                     ->sortable(),
                 TextColumn::make('status')
                     ->badge(),
                 TextColumn::make('photopath')
+                    ->label('Photo')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

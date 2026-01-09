@@ -58,12 +58,6 @@ class ApplicantBiodata extends Model
         );
     }
 
-    //hasONE
-
-    public function user(): HasOne
-    {
-        return $this->hasOne(User::class);
-    }
 
     public function employee(): HasOne
     {

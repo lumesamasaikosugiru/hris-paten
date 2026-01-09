@@ -65,7 +65,6 @@ class JobApplicantsTable
                                 ]);
 
                                 $user->assignRole('employee');
-                                $applicant->user()->save($user);
                             } else {
                                 $user = $applicant->user;
                             }

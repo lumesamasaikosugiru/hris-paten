@@ -19,7 +19,7 @@
    DARK MODE
    ========================= */
 .dark {
-    --color-main-primary: rgb(26, 10, 24);      /* deep navy */
+    --color-main-primary: rgb(42, 16, 38);      /* deep navy */
     --color-main-secondary: rgb(30, 41, 59);    /* dongker */
     --color-main-black: rgb(177, 192, 212);     /* light text */
     --color-main-white: rgb(248, 250, 252);
@@ -50,7 +50,12 @@
    SIDEBAR
    ========================= */
 .fi-sidebar {
-    background-color: var(--color-main-secondary);
+    /* background-color: var(--color-main-secondary); */
+     background: linear-gradient(
+        100deg,
+        var(--color-main-primary),
+        var(--color-main-secondary)
+    );
     border-radius: 1rem;
     margin-left: 0.5rem;
 }

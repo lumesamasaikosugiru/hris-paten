@@ -21,7 +21,7 @@ class JobApplicantResource extends Resource
 {
     protected static ?string $model = JobApplicant::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentCheck;
     protected static string|UnitEnum|null $navigationGroup = 'Hiring & Screenings';
 
     protected static ?string $recordTitleAttribute = 'JobApplicant';
