@@ -15,7 +15,7 @@ class EmployeeForm
             ->components([
                 Select::make('user_id')
                     ->relationship('user', 'name')
-                    ->label('Pegawai')
+                    ->label('Akun Pengguna')
                     ->required(),
                 Select::make('school_id')
                     ->relationship('school', 'name')

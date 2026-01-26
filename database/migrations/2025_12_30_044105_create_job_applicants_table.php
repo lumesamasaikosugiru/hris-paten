@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('applicant_biodata_id')->constrained()->cascadeOnDelete();
             $table->foreignId('job_vacancy_id')->constrained()->cascadeOnDelete();
-            $table->enum('status', ['submitted', 'screening', 'accepted', 'rejected']);
+            $table->enum('status', ['submitted', 'screening', 'accepted', 'rejected'])->default('submitted');
             $table->date('date_submitted');
             $table->timestamps();
         });
